@@ -1,12 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 .quick-sand-font{
-    font-family: "Open Sans", serif;
+    font-family: "Quicksand", serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-variation-settings:"wdth" 100;
   }
-  
+
+  /* shared styles */
+  .bg-colour{
+    background-color: rgb(247, 247, 247);;
+  }
+  .btn-primary{
+    border-radius: 12px;
+    border: none;
+    padding: 10px 30px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.orange-colour{
+    color: orange;
+}
+.skyblue-colour{
+    color: skyblue;
+}
 
 
 /* navigation bar styles */
@@ -14,9 +37,9 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
-#school-text{
+.school-text{
     font-size: 2rem;
     font-weight: bold;
     color: black;
@@ -30,8 +53,114 @@
 .nav-item{
     display: flex;
     gap: 32px;
+    font-size: 1.25rem;
     
 }
 .nav-item> li{
     list-style: none;
+}
+#home{
+    color: orange;
+    font-weight: bold;
+}
+#about{
+    color: skyblue;
+}
+#facilities{
+    color: #05D4DF;
+}
+#admission{
+    color: #5D58EF;
+}
+
+.contact-btn{
+    background-color: orange;
+}
+
+
+/* banner styles */
+.banner-container{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin: 0 140px;
+}
+.banner-texts{
+    max-width: 640px;
+}
+.banner-title{
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.banner-description{
+    font-size: 1.5rem;
+}
+.enroll-btn{
+    background-color:rgba(0, 0, 0, 0.884);
+}
+header> .enroll-btn{
+    background-color: inherit;
+}
+
+.bar-icon{
+    display: none;
+}
+
+/* curriculum section styles */
+
+.curriculum-section{
+    margin: 0 140px;
+}
+
+.curriculum-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+.curriculum{
+    max-width: 360px;
+    max-height: 480px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px 70px;
+}
+.curriculum-1{
+    border:1px solid #DEF5FF;
+    background: linear-gradient(180deg,#DEF5FF, #FFFFFF 40%);
+}
+.curriculum-2{
+    border:1px solid #FFF4DC;
+    background:linear-gradient(180deg, #FFF4DC, #FFFFFF 40%);
+}
+.curriculum-3{
+    border:1px solid #F2E8FF;
+    background: linear-gradient( 180deg, #EEE1FF, #FFFFFF 40%);
+}
+
+/* small device */
+@media screen and (max-width:576px) {
+    .nav-item-container, .contact-btn, .school-text{
+        display: none;
+    }
+    .banner-container{
+       flex-direction:column-reverse;
+        margin: 25px;
+        text-align: center;
+    }
+    .banner-texts{
+        justify-items: center;
+    }
+
+    .logo-school{
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+    }
+    .bar-icon{
+        display: flex;
+        font-size: 2em;
+        margin-left: 150px;
+    }
+   
 }
