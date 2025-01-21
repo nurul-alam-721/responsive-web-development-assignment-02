@@ -78,12 +78,13 @@
 }
 
 
+
 /* banner styles */
 .banner-container{
     display: flex;
     align-items: center;
     gap: 50px;
-    margin: 0 140px;
+    margin: 0px 140px;
 }
 .banner-texts{
     max-width: 640px;
@@ -98,10 +99,9 @@
 }
 .enroll-btn{
     background-color:rgba(0, 0, 0, 0.884);
+    margin-bottom: 20px;
 }
-header> .enroll-btn{
-    background-color: inherit;
-}
+
 
 .bar-icon{
     display: none;
@@ -109,7 +109,10 @@ header> .enroll-btn{
 
 /* curriculum section styles */
 
+
+
 .curriculum-section{
+    background-image: url("/assets/bg.png");
     margin: 0 140px;
 }
 
@@ -119,8 +122,8 @@ header> .enroll-btn{
     gap: 28px;
 }
 .curriculum{
-    max-width: 360px;
-    max-height: 480px;
+    max-width: 320px;
+    /* max-height: 380px; */
     text-align: center;
     border-radius: 20px;
     padding: 30px 70px;
@@ -128,14 +131,41 @@ header> .enroll-btn{
 .curriculum-1{
     border:1px solid #DEF5FF;
     background: linear-gradient(180deg,#DEF5FF, #FFFFFF 40%);
+    box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
 }
 .curriculum-2{
     border:1px solid #FFF4DC;
     background:linear-gradient(180deg, #FFF4DC, #FFFFFF 40%);
+    box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
 }
 .curriculum-3{
     border:1px solid #F2E8FF;
     background: linear-gradient( 180deg, #EEE1FF, #FFFFFF 40%);
+    box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
+}
+
+#read-more-1{
+    color: #F0AA00;
+}
+#read-more-2{
+    color: #64C8FF;
+}
+#read-more-3{
+    color: #8700FF;
+}
+
+.greater-less-sign{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    max-width: 100%;
+    color: white;
+    margin-top: 20px;
+}
+.fa-less-than, .fa-greater-than{
+    background-color: orange;
+    padding: 20px;
+    border-radius: 50%;
 }
 
 /* small device */
@@ -151,16 +181,25 @@ header> .enroll-btn{
     .banner-texts{
         justify-items: center;
     }
+    #hero-kid{
+        margin: 20px 10px;
+    }
 
     .logo-school{
         display: flex;
         justify-content: space-between;
-        width: 100px;
+        width: 100%;
+        gap: 220px;
     }
     .bar-icon{
-        display: flex;
+        display: inline;
         font-size: 2em;
-        margin-left: 150px;
+    }
+
+    .curriculum-container{
+        grid-template-columns: 1fr;
+        gap: 15px;
+        justify-content: center;
     }
    
 }
