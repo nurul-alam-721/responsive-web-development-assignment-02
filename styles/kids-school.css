@@ -8,7 +8,7 @@
 
   /* shared styles */
   .bg-colour{
-    background-color: rgb(247, 247, 247);;
+    background-color: rgba(255, 255, 255, 1);
   }
   .btn-primary{
     border-radius: 12px;
@@ -17,6 +17,10 @@
     color: white;
     font-size: 1.5rem;
     font-weight: 600;
+    background-color: black;
+  }
+  .btn-primary:hover{
+    background-color: #276d92;
   }
 .section-title{
     font-size: 2.8rem;
@@ -31,7 +35,15 @@
     color: skyblue;
 }
 
+.bg-2{
+    background-image: url("/assets/bg.png");
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 1)
 
+}
+.curriculum-section, .stories-container{
+    margin: 0 140px;
+}
 /* navigation bar styles */
 .nav-bar{
     width: 100%;
@@ -78,6 +90,9 @@
 }
 
 
+.fa-bars{
+    display: none;
+}
 
 /* banner styles */
 .banner-container{
@@ -102,19 +117,9 @@
     margin-bottom: 20px;
 }
 
-
-.bar-icon{
-    display: none;
-}
-
 /* curriculum section styles */
 
 
-
-.curriculum-section{
-    background-image: url("/assets/bg.png");
-    margin: 0 140px;
-}
 
 .curriculum-container{
     display: grid;
@@ -122,8 +127,7 @@
     gap: 28px;
 }
 .curriculum{
-    max-width: 320px;
-    /* max-height: 380px; */
+    max-width: 350px;
     text-align: center;
     border-radius: 20px;
     padding: 30px 70px;
@@ -154,7 +158,7 @@
     color: #8700FF;
 }
 
-.greater-less-sign{
+.arrow-signs{
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -167,6 +171,38 @@
     padding: 20px;
     border-radius: 50%;
 }
+
+/* our stories styles */
+.story-1, .story-2, .story-3, .story-4, .story-5 {
+  border-radius: 16px;
+  background-color: white;
+}
+
+/* .story-2, .story-3, .story-4, .story-5 {
+    width: 250px;
+    height: 280px;
+  }
+.story-1{
+    width: 500px;
+    height: 540px;
+} */
+
+.stories img{
+    border-radius: 16px 16px 0px 0px;
+}
+/* grid layout not done */
+.stories{
+    display: grid;    
+    gap: 16px;
+   
+}
+.stories-container{
+    text-align: center;
+}
+.view-btn{
+    display: inline-block;
+}
+
 
 /* small device */
 @media screen and (max-width:576px) {
@@ -191,8 +227,8 @@
         width: 100%;
         gap: 220px;
     }
-    .bar-icon{
-        display: inline;
+    .fa-bars{
+        display: flex;
         font-size: 2em;
     }
 
@@ -201,5 +237,12 @@
         gap: 15px;
         justify-content: center;
     }
+    .curriculum{
+        width: 320px;
+    }
+    .arrow-signs{
+        display: none;
+    }
    
 }
+
