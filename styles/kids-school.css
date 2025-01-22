@@ -33,11 +33,11 @@
     padding: 40px;
 }
 .bg-1{
-    background-image: url("./assets/bg.png"), linear-gradient(0.00deg, rgba(229, 205, 163, 0.3), rgba(229, 205, 163, 0.3)100%);
+    background-image: url("../assets/bg.png"), linear-gradient(0.00deg, rgba(229, 205, 163, 0.3), rgba(229, 205, 163, 0.3)50%);
     background-size: cover;
 }
 .bg-2{
-    background-image: url("./assets/bg.png"), linear-gradient(180deg, rgba(229, 205, 163, 0.3), rgba(245, 177, 31, 0.54)100%);
+    background-image: url("../assets/bg.png"), linear-gradient(180deg, rgba(229, 205, 163, 0.3), rgba(245, 177, 31, 0.54)50%);
     background-size: cover;
 }
 .description{
