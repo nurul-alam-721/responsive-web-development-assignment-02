@@ -11,7 +11,7 @@
 
   /* shared styles */
   .bg-colour{
-    background-color: rgb(243, 242, 242);
+    background: rgba(229, 205, 163,0.3);
   }
   .btn-primary{
     border-radius: 12px;
@@ -32,29 +32,30 @@
     text-align: center;
     padding: 40px;
 }
-
-
-.bg-2{
-    background-image: url("/assets/bg.png"), linear-gradient(0.00deg, rgba(254,163,1,0.3), rgba(255,255,255,0.3)100%);
+.bg-1{
+    background-image: url("/assets/bg.png"), linear-gradient(0.00deg, rgba(229, 205, 163, 0.3), rgba(229, 205, 163, 0.3)100%);
     background-size: cover;
-
+}
+.bg-2{
+    background-image: url("/assets/bg.png"), linear-gradient(180deg, rgba(229, 205, 163, 0.3), rgba(245, 177, 31, 0.54)100%);
+    background-size: cover;
 }
 .description{
     font-weight: 400;
     color: #66666;
 }
 .curriculum-section, .stories-container,
-.banner-container, marquee{
-    margin: 0px 115px;
+.banner-container,.nav-bar, marquee{
+    margin: 0px 80px;
 }
 
 /* navigation bar styles */
 
 .nav-bar{
-    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-top: 10px;
 }
 .school-text{
     font-size: 2rem;
@@ -74,10 +75,11 @@
 }
 .nav-item, .footer-nav-item> li{
     list-style: none;
+    font-weight: bold;
 }
 #home{
     color: orange;
-    font-weight: bold;
+   
 }
 #about{
     color: rgb(7, 176, 242);
@@ -90,7 +92,7 @@
 }
 
 .contact-btn{
-    background-color: orange;
+    background-color: orange;                      ;
 }
 
 
@@ -98,11 +100,11 @@
     display: none;
 }
 hr{
-    display: none;
+display: none;
 }
 
 marquee{
-    background-color: #7396a3;
+    background-color: #85dd3e;
     color: white;
     padding: 15px 0px;
     font-size: 2rem;
@@ -116,7 +118,7 @@ marquee{
 .banner-container{
     display: flex;
     align-items: center;
-    gap: 50px;
+    justify-content: space-between;
 }
 .banner-texts{
     max-width: 560px;
@@ -127,9 +129,6 @@ marquee{
     margin: 20px 0px;
 }
 
-.banner-description{
-    font-size: 1.25rem;
-}
 
 #vision{
     color: rgb(6, 176, 244);
@@ -188,15 +187,18 @@ marquee{
     display: flex;
     gap: 10px;
     justify-content: center;
-    max-width: 100%;
     color: white;
     margin-top: 20px;
 }
+
 .fa-less-than, .fa-greater-than{
     background-color: orange;
     padding: 20px;
     border-radius: 50%;
     margin-bottom: 20px;
+}
+.fa-less-than:hover, .fa-greater-than:hover{
+    background-color: #276d92;
 }
 
 
@@ -213,12 +215,6 @@ marquee{
   background-color: white;
 }
 
-.story-1 img{
-    height:auto;
-}
-.story-2 .story-3 .story-4 .story-5> img{
-    height: 170px;
-}
 .stories img{
     width: 100%;
     border-radius: 16px 16px 0px 0px;
@@ -283,8 +279,15 @@ footer{
 .footer-logo-school{
     display: flex;
     margin-bottom: 15px;
-    max-width: 300px;
+    gap: 10px;
 }
+
+.footer-logo{
+    mix-blend-mode: difference; 
+}
+
+
+
 .footer-column-2-3-title{
     font-size: 1.25rem;
     font-weight: bold;
@@ -294,6 +297,9 @@ footer{
     margin-bottom: 10px;
 }
 
+
+
+
 /* small device */
 
 @media screen and (max-width:576px) {
@@ -301,11 +307,13 @@ footer{
      .school-text, .story-1,  .arrow-signs{
         display: none;
     }
-    .curriculum-section, .stories-container, .banner-container{
+    .curriculum-section, .stories-container, .banner-container, .nav-bar{
         margin: 0px 25px;
     }
     marquee{
         margin: 15px 10px;
+        font-size: 1.5rem;
+        padding: 10px 0x;
     }
     .banner-container{
        flex-direction:column-reverse;
@@ -313,33 +321,34 @@ footer{
     .banner-texts{
         justify-items: center;
     }
-
-    .logo-school{
-        display: flex;
-        justify-content: space-between;
-         gap: 250px;
-    }
     .fa-bars{
         display: inline;
-        font-size: 2em;
+        font-size: 2rem;
     }
     hr{
         display: block;
+        border-top: 2px solid #a5ecd1;  /* Dotted line with a red color */
+        margin: 10px 0px;
     }
-
     .curriculum-container{
         grid-template-columns: 1fr;
         gap: 15px;
         justify-content: center;
     }
-    .curriculum{
-        width: 320px;
+    .curriculum-3{
+        margin-bottom: 15px;
     }
-   
+   .hero-kid{
+    max-width: 100%;
+   }
    .stories{
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    align-items: center;
+   }
+   .date{
+    margin-left: 5px;
+    padding: 7px 0px;
+    max-width: 130px;
     
    }
    footer{
