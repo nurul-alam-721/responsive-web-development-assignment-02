@@ -283,13 +283,13 @@ footer{
 .footer-logo-school{
     display: flex;
     margin-bottom: 15px;
+    align-items: center;
     gap: 10px;
 }
-
 .footer-logo{
-    mix-blend-mode: difference; 
+    width: 65px;
+    height: 70px;
 }
-
 .footer-column-2-3-title{
     font-size: 1.25rem;
     font-weight: bold;
@@ -346,8 +346,8 @@ footer{
 
    .date{
     margin-left: 5px;
-    padding: 7px 0px;
-    max-width: 130px;
+    padding: 7px 5px;
+    max-width: 100px;
     
    }
    footer{
