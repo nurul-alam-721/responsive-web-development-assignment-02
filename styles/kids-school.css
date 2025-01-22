@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-
+* {
+    margin: 0;
+    padding: 0;
+}
 .quick-sand-font{
     font-family: "Quicksand", serif;
     font-optical-sizing: auto;
@@ -8,7 +11,7 @@
 
   /* shared styles */
   .bg-colour{
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(243, 242, 242);
   }
   .btn-primary{
     border-radius: 12px;
@@ -18,6 +21,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     background-color: black;
+
   }
   .btn-primary:hover{
     background-color: #276d92;
@@ -26,35 +30,35 @@
     font-size: 2.8rem;
     font-weight: 600;
     text-align: center;
+    padding: 40px;
 }
 
-.orange-colour{
-    color: orange;
-}
-.skyblue-colour{
-    color: skyblue;
-}
 
 .bg-2{
     background-image: url("/assets/bg.png");
     background-size: cover;
-    background-color: rgba(255, 255, 255, 1)
+    background-color: rgb(243, 242, 242);
 
 }
-.curriculum-section, .stories-container{
-    margin: 0 140px;
+.description{
+    font-weight: 400;
+    color: #66666;
 }
+.curriculum-section, .stories-container, .banner-container{
+    margin: 0px 115px;
+}
+
 /* navigation bar styles */
+
 .nav-bar{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .school-text{
     font-size: 2rem;
     font-weight: bold;
-    color: black;
 }
 .logo-school{
     display: flex;
@@ -68,7 +72,7 @@
     font-size: 1.25rem;
     
 }
-.nav-item> li{
+.nav-item, .footer-nav-item> li{
     list-style: none;
 }
 #home{
@@ -76,13 +80,13 @@
     font-weight: bold;
 }
 #about{
-    color: skyblue;
+    color: rgb(7, 176, 242);
 }
 #facilities{
-    color: #05D4DF;
+    color: #d104f5;
 }
 #admission{
-    color: #5D58EF;
+    color: #221bf1;
 }
 
 .contact-btn{
@@ -93,32 +97,42 @@
 .fa-bars{
     display: none;
 }
+hr{
+    display: none;
+}
 
 /* banner styles */
+
 .banner-container{
     display: flex;
     align-items: center;
     gap: 50px;
-    margin: 0px 140px;
 }
 .banner-texts{
-    max-width: 640px;
+    max-width: 560px;
 }
 .banner-title{
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 800;
+    margin: 20px 0px;
 }
 
 .banner-description{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+}
+
+#vision{
+    color: rgb(6, 176, 244);
+}
+#empowering{
+    color: orange;
 }
 .enroll-btn{
     background-color:rgba(0, 0, 0, 0.884);
-    margin-bottom: 20px;
+    margin: 20px 0px;
 }
 
 /* curriculum section styles */
-
 
 
 .curriculum-container{
@@ -147,7 +161,9 @@
     background: linear-gradient( 180deg, #EEE1FF, #FFFFFF 40%);
     box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
 }
-
+#read-more-1, #read-more-2, #read-more-3{
+    margin: 15px auto;
+}
 #read-more-1{
     color: #F0AA00;
 }
@@ -170,66 +186,136 @@
     background-color: orange;
     padding: 20px;
     border-radius: 50%;
+    margin-bottom: 20px;
 }
 
+
 /* our stories styles */
+
+.stories{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 20px;
+   
+}
 .story-1, .story-2, .story-3, .story-4, .story-5 {
   border-radius: 16px;
   background-color: white;
 }
 
-/* .story-2, .story-3, .story-4, .story-5 {
-    width: 250px;
-    height: 280px;
-  }
-.story-1{
-    width: 500px;
-    height: 540px;
-} */
-
+.story-1 img{
+    height:330px;
+}
+.story-2 .story-3 .story-4 .story-5> img{
+    height: 170px;
+}
 .stories img{
+    width: 100%;
     border-radius: 16px 16px 0px 0px;
 }
-/* grid layout not done */
-.stories{
-    display: grid;    
-    gap: 16px;
-   
+
+
+.story-1{
+    grid-row: span 2;
 }
 .stories-container{
+    justify-items: center;
+}
+.date{
+    position: relative;
+    margin-top: -22.5px;
+    margin-left: 30px;
+    padding: 10px 0px;
+    border-radius: 48px;
+    max-width: 150px;
+    color: white;
     text-align: center;
+}
+.date-1{
+    background-color: #11c85d;
+}
+.date-2, .date-3{
+    background-color: #524de2; 
+}
+.date-4, .date-5{
+    background-color:#c81ce7;
+}
+.story-title{
+    color: rgba(0, 0, 0, 1);
+    font-weight: bold;
+    margin: 15px 10px;
+}
+.story-title-1{
+    font-size: 1.5rem;
+    margin: 15px 0px;
+}
+.story-title-1-description{
+    margin: 25px 10px;
 }
 .view-btn{
     display: inline-block;
+    margin:50px auto;
 }
 
 
+/* footer styles */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 140px 120px;
+    background-color: #01ACFD;
+    color: white;
+}
+.footer-column-1{
+    max-width: 400px;
+}
+.footer-logo-school{
+    display: flex;
+    margin-bottom: 15px;
+    max-width: 300px;
+}
+.footer-column-2-3-title{
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.footer-nav-item> li{
+    margin-bottom: 10px;
+}
+
 /* small device */
+
 @media screen and (max-width:576px) {
-    .nav-item-container, .contact-btn, .school-text{
+    .nav-item-container, .contact-btn,
+     .school-text, .story-1,  .arrow-signs{
         display: none;
+    }
+    .curriculum-section, .stories-container, .banner-container{
+        margin: 0px 25px;
     }
     .banner-container{
        flex-direction:column-reverse;
-        margin: 25px;
-        text-align: center;
     }
     .banner-texts{
         justify-items: center;
     }
     #hero-kid{
-        margin: 20px 10px;
+        width: 100%;
+
     }
 
     .logo-school{
         display: flex;
         justify-content: space-between;
-        width: 100%;
-        gap: 220px;
+         gap: 250px;
     }
     .fa-bars{
-        display: flex;
+        display: inline;
         font-size: 2em;
+    }
+    hr{
+        display: block;
     }
 
     .curriculum-container{
@@ -240,9 +326,19 @@
     .curriculum{
         width: 320px;
     }
-    .arrow-signs{
-        display: none;
-    }
    
+   .stories{
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    align-items: center;
+    
+   }
+   footer{
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 45px;
+
+   }
+
 }
 
