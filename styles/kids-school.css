@@ -204,9 +204,9 @@ marquee{
 
 /* our stories styles */
 
+
 .stories{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);  
+    display: flex;  
     gap: 20px;
    
 }
@@ -219,10 +219,14 @@ marquee{
     width: 100%;
     border-radius: 16px 16px 0px 0px;
 }
-
+.story-column-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
 .story-1{
-    grid-row: span 2;
+   max-width: 540px;
 }
 .stories-container{
     justify-items: center;
@@ -286,8 +290,6 @@ footer{
     mix-blend-mode: difference; 
 }
 
-
-
 .footer-column-2-3-title{
     font-size: 1.25rem;
     font-weight: bold;
@@ -327,7 +329,7 @@ footer{
     }
     hr{
         display: block;
-        border-top: 2px solid #a5ecd1;  /* Dotted line with a red color */
+        border-top: 2px solid #a5ecd1;
         margin: 10px 0px;
     }
     .curriculum-container{
@@ -341,10 +343,7 @@ footer{
    .hero-kid{
     max-width: 100%;
    }
-   .stories{
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-   }
+
    .date{
     margin-left: 5px;
     padding: 7px 0px;
